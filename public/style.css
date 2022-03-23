@@ -6,30 +6,27 @@
 .app {
     display: grid;
     position:relative;
+    min-width: 1024px;
     grid-template-columns:240px 1fr;
     grid-template-rows: min-content 1fr;
     height:100vh;
     background-color:#030303;
     font-family:'Manrope', Tahoma, Geneva, Verdana, sans-serif ;
 }
-h2 {
+.title {
     margin: 0;
     padding: 0;
     margin-top:15px;
 
 }
-h3 {
+.definition {
     font-weight: 200;
     font-size: 90%;
     color: #B3B3B3;
     margin:0;
     padding: 0;
 }
-a {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-}
+
 
 .header {
     background-color: #171717;
@@ -39,7 +36,7 @@ a {
     align-items: center;
     left: 240px;
     position: sticky;
-    top: 0px;
+    top: 0;
 }
 .header-items {
     display: flex;
@@ -51,7 +48,7 @@ a {
     margin-left: -45px;
     margin-right: 15px;
 }
-button {
+.rate, .profile{
     height: 36px;
     font-family:'Manrope', Tahoma, Geneva, Verdana, sans-serif ;
     background-color:#030303;
@@ -116,12 +113,12 @@ button {
 
 
 }
-ul {
+.tags, .playlist {
     margin: 24px;
     padding: 0;
     list-style: none;
 }
- ul li {
+ .point {
     font-weight: bold;
     padding-top: 16px;
     font-size: 14px;    
@@ -247,4 +244,9 @@ ul {
     vertical-align: middle;
     margin-left: 15px;   
     width: 200px;
+}
+.link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
