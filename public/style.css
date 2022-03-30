@@ -13,7 +13,7 @@
     background-color:#030303;
     font-family:'Manrope', Tahoma, Geneva, Verdana, sans-serif ;
 }
-.title {
+.heading {
     margin: 0;
     padding: 0;
 
@@ -88,7 +88,7 @@
     padding-right: 4px;
 
 }
-.profile img:first-child {
+.profile-image:first-child {
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -96,7 +96,7 @@
     vertical-align: middle;
 
 }
-.profile img:last-child {
+.profile-image:last-child {
     height: 12px;
     width: 16px;
     vertical-align: middle;
@@ -114,7 +114,7 @@
 
 
 }
-.navigation a {
+.tag {
    text-decoration: none;
    color:#B3B3B3;
    font-family: Manrope, Arial, Helvetica, sans-serif;
@@ -141,7 +141,7 @@
     transform: scale(1.1);
  }
 
-.navigation img {
+.navigation-image {
     height: 24px;
     width: 24px;
     padding-right: 16px;
@@ -183,7 +183,7 @@
     height: 275px;
     margin: 10px;
 }
-.box img {
+.box-image {
     border-radius: 15px;
     width: 170px;
     height: 170px;
@@ -191,15 +191,15 @@
 
 }
 
-.box div {
+.title, .description {
     padding-left: 20px;
 }
-.box .description {
+.description {
     padding: 10px 20px;
     color:#B3B3B3;
     font-size: 75%;
 }
-.musicians .box img {
+.musicians-image {
     border-radius: 50%;
 }
 
@@ -229,10 +229,10 @@
     text-align: center;
     width: 100%;
 }
-.listening-items img {
+.listening-items-image{
     margin-bottom: 15px;
 }
-.player img {
+.player-image {
     vertical-align: middle;
     width: 14px;
     height: 14px;
@@ -240,11 +240,11 @@
     margin-right: 20px;
     margin-bottom: 10px;
 }
-.player img:nth-child(2) {
+.player-image:nth-child(2) {
     width: 32px;
     height: 32px;
 }
-.info img{
+.info-image{
     vertical-align: middle;
     margin-left: 15px;
     width: 200px;
