@@ -10,9 +10,10 @@
   <meta name="description" content="Web site created using create-react-app" />
 
   <title>React App</title>
+  <script src="./script.js" defer></script>
 </head>
 
-<body>
+<body onload="onPageLoad()">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root" class="app">
     <header class="header">
@@ -22,8 +23,8 @@
           <a class="link"><img src="image/ChevronRight.png" alt=""></a>
         </div>
         <div class="profile-buttons">
-          <button class="rate">СМЕНИТЬ ТАРИФ</button>
-          <button class="profile">
+          <input type="search" class="header__search" placeholder="    Search..." />
+          <button class="profile" onclick="requestAuthorization()">
             <img class="profile-image" src="image/musician/2.jpg" alt="">Вероника
             <img class="profile-image" src="image/Play.png" alt="">
           </button>
@@ -37,15 +38,13 @@
       <ul class="tags">
         <li class="point"><a href="#main" class="tag"><img class="navigation-image" src="image/Home.png"
               alt="Главная">Главная</a></li>
-        <li class="point"><a href="#search" class="tag"><img class="navigation-image" src="image/Search small.png"
-              alt="Поиск">Поиск</a></li>
         <li class="point"><a href="mediaLibrary" class="tag"><img class="navigation-image" src="image/Library small.png"
               alt="Моя медиатека">Моя
             медиатека</a></li>
       </ul>
       <ul class="playlist">
-        <li class="point"><a class="link tag"><img class="navigation-image" src="image/Plus.png"
-              alt="Создать плейлист">Создать
+        <li class="point"><a class="link tag" onclick="createDefaultPlaylist()"><img class="navigation-image"
+              src="image/Plus.png" alt="Создать плейлист">Создать
             плейлист</a></li>
         <li class="point"><a class="link tag"><img class="navigation-image" src="image/Like.png" alt="Любимые треки">
             Любимые треки</a>
@@ -57,9 +56,9 @@
 
         <h2 class="heading">Только для тебя, Вероника</h2>
 
-        <div class="row">
+        <div id="albums" class="row">
 
-          <div class="box">
+          <!-- <div class="box">
             <a class="link">
               <img class="box-image" src="image/mix1.jpg" alt="Микс дня #1">
               <div class="title">Микс дня #1</div>
@@ -101,7 +100,7 @@
               <div class="title">Радар новинок</div>
               <div class="description">Свежая музыка от любимых исполнителей и новые ...</div>
             </a>
-          </div>
+          </div> -->
 
 
 
@@ -115,9 +114,9 @@
         </div>
 
 
-        <div class="row">
+        <div id="playlists" class="row">
 
-          <div class="box">
+          <!-- <div class="box">
             <a class="link #main">
               <img class="box-image" src="image/mood/1.jpg" alt="Жизнь прекрасна">
               <div class="title">Жизнь прекрасна</div>
@@ -155,7 +154,7 @@
               <div class="title">Chill Tracks</div>
               <div class="description">Softer kinda dance</div>
             </a>
-          </div>
+          </div> -->
 
 
         </div>
@@ -167,7 +166,7 @@
         </a>
         <div class="row final">
 
-          <div class="box">
+          <!-- <div class="box">
             <a class="link">
               <img class="box-image musicians-image" src="image/musician/1.jpg" alt="MAYOT">
               <div class="title">MAYOT</div>
@@ -209,7 +208,7 @@
               <div class="title">OG Buda</div>
               <div class="description">Исполнитель</div>
             </a>
-          </div>
+          </div> -->
 
 
 
