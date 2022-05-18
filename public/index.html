@@ -1,235 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <link rel="stylesheet" href="./style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+    <title>React App</title>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/search.js" defer></script>
+  </head>
 
-  <title>React App</title>
-  <script src="./script.js" defer></script>
-</head>
-
-<body onload="onPageLoad()">
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root" class="app">
-    <header class="header">
-      <div class="header-items">
-        <div class="header-items__link">
-          <a class="link"><img src="image/ChevronLeft.png" alt=""></a>
-          <a class="link"><img src="image/ChevronRight.png" alt=""></a>
+  <body onload="onPageLoad()">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="app">
+      <header class="header">
+        <div class="header-items">
+          <div class="header-items__link">
+            <a class="link"><img src="image/ChevronLeft.png" alt="" /></a>
+            <a class="link"><img src="image/ChevronRight.png" alt="" /></a>
+          </div>
+          <div class="profile-buttons">
+            <input type="search" class="header__search" placeholder="    Search..." />
+            <button class="profile" onclick="requestAuthorization()">
+              <img class="profile-image" src="image/musician/2.jpg" alt="" />Профиль
+              <img class="profile-image" src="image/Play.png" alt="" />
+            </button>
+          </div>
         </div>
-        <div class="profile-buttons">
-          <input type="search" class="header__search" placeholder="    Search..." />
-          <button class="profile" onclick="requestAuthorization()">
-            <img class="profile-image" src="image/musician/2.jpg" alt="">Вероника
-            <img class="profile-image" src="image/Play.png" alt="">
-          </button>
+      </header>
+      <div class="navigation">
+        <div class="logo">
+          <img class="navigation-image logo-image" src="image/Logo.png" alt="logo" />
         </div>
-
-
+        <ul class="tags">
+          <li class="point">
+            <a href="#main" class="tag"
+              ><img class="navigation-image" src="image/Home.png" alt="Главная" />Главная</a
+            >
+          </li>
+          <li class="point">
+            <a href="mediaLibrary" class="tag"
+              ><img class="navigation-image" src="image/Library small.png" alt="Моя медиатека" />Моя
+              медиатека</a
+            >
+          </li>
+        </ul>
+        <ul class="playlist">
+          <li class="point">
+            <a class="link tag" onclick="createDefaultPlaylist()"
+              ><img class="navigation-image" src="image/Plus.png" alt="Создать плейлист" />Создать
+              плейлист</a
+            >
+          </li>
+          <li class="point">
+            <a class="link tag"
+              ><img class="navigation-image" src="image/Like.png" alt="Любимые треки" /> Любимые
+              треки</a
+            >
+          </li>
+        </ul>
       </div>
-    </header>
-    <div class="navigation">
-      <div class="logo"><img class="navigation-image logo-image" src="image/Logo.png" alt="logo"></div>
-      <ul class="tags">
-        <li class="point"><a href="#main" class="tag"><img class="navigation-image" src="image/Home.png"
-              alt="Главная">Главная</a></li>
-        <li class="point"><a href="mediaLibrary" class="tag"><img class="navigation-image" src="image/Library small.png"
-              alt="Моя медиатека">Моя
-            медиатека</a></li>
-      </ul>
-      <ul class="playlist">
-        <li class="point"><a class="link tag" onclick="createDefaultPlaylist()"><img class="navigation-image"
-              src="image/Plus.png" alt="Создать плейлист">Создать
-            плейлист</a></li>
-        <li class="point"><a class="link tag"><img class="navigation-image" src="image/Like.png" alt="Любимые треки">
-            Любимые треки</a>
-        </li>
-      </ul>
-    </div>
-    <div class="content">
-      <div class="boxes">
-
-        <h2 class="heading">Только для тебя, Вероника</h2>
-
-        <div id="albums" class="row">
-
-          <!-- <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/mix1.jpg" alt="Микс дня #1">
-              <div class="title">Микс дня #1</div>
-              <div class="description">Pornofilmy, Bi-2, Splean и не только</div>
-            </a>
+      <div class="content"></div>
+      <div class="listening">
+        <div class="info"><img class="info-image" src="image/player/Right Song.png" alt="" /></div>
+        <div class="listening-items">
+          <div class="player">
+            <img
+              class="player-image listening-items-image"
+              src="image/player/Skip left.png"
+              alt=""
+            />
+            <img class="player-image listening-items-image" src="image/player/Play.png" alt="" />
+            <img
+              class="player-image listening-items-image"
+              src="image/player/Skip right.png"
+              alt=""
+            />
           </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/mix2.jpg" alt="Микс дня #2">
-              <div class="title">Микс дня #2</div>
-              <div class="description">Monetochka, Manizha, HLEB и не только</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/mix3.jpg" alt="Микс дня #3">
-              <div class="title">Микс дня #3</div>
-              <div class="description">Beyoncé, Chloe x Halle, Normani и не только</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/img4.jpg" alt="Открытия недели">
-              <div class="title">Открытия недели</div>
-              <div class="description">Новые треки и редкие композиции в ...</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/img5.jpg" alt="Радар новинок">
-              <div class="title">Радар новинок</div>
-              <div class="description">Свежая музыка от любимых исполнителей и новые ...</div>
-            </a>
-          </div> -->
-
-
-
-        </div>
-      </div>
-      <div class="boxes">
-        <div class="text">
-          <h2 class="heading">Настроение</h2>
-          <h3 class="definition">Здесь найдется музыка для любого настроения.</h3>
-
-        </div>
-
-
-        <div id="playlists" class="row">
-
-          <!-- <div class="box">
-            <a class="link #main">
-              <img class="box-image" src="image/mood/1.jpg" alt="Жизнь прекрасна">
-              <div class="title">Жизнь прекрасна</div>
-              <div class="description">Позитивные песни для отличного настроения</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/mood/2.png" alt="Feelin' Myself">
-              <div class="title">Feelin' Myself</div>
-              <div class="description">The hip-hop playlist that's a whole mood. Art By Laci...</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/mood/3.jpg" alt="Всё сложно">
-              <div class="title">Всё сложно</div>
-              <div class="description">Для тех моментов, когда нет уверенности ни в чем.</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <img class="box-image" src="image/mood/4.png" alt="плёнка">
-            <div class="title">плёнка</div>
-            <div class="description">саундтрек твоих лучших снимков</div>
-          </div>
-          <div class="box">
-            <a class="link">
-              <img class="box-image" src="image/mood/5.jpg" alt="Chill Tracks">
-              <div class="title">Chill Tracks</div>
-              <div class="description">Softer kinda dance</div>
-            </a>
-          </div> -->
-
-
-        </div>
-
-      </div>
-      <div class="boxes musicians">
-        <a class="link">
-          <h2 class="heading">Популярные исполнители</h2>
-        </a>
-        <div class="row final">
-
-          <!-- <div class="box">
-            <a class="link">
-              <img class="box-image musicians-image" src="image/musician/1.jpg" alt="MAYOT">
-              <div class="title">MAYOT</div>
-              <div class="description">Исполнитель</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image musicians-image" src="image/musician/2.jpg" alt="kizaru">
-              <div class="title">kizaru</div>
-              <div class="description">Исполнитель</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image musicians-image" src="image/musician/3.jpg" alt="Big Baby Tape">
-              <div class="title">Big Baby Tape</div>
-              <div class="description">Исполнитель</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image musicians-image" src="image/musician/4.jpg" alt="Скриптонит">
-              <div class="title">Скриптонит</div>
-              <div class="description">Исполнитель</div>
-            </a>
-          </div>
-
-
-          <div class="box">
-            <a class="link">
-              <img class="box-image musicians-image" src="image/musician/5.jpg" alt="OG Buda">
-              <div class="title">OG Buda</div>
-              <div class="description">Исполнитель</div>
-            </a>
-          </div> -->
-
-
-
+          <div><img src="image/player/Player.png" alt="" /></div>
         </div>
       </div>
     </div>
-    <div class="listening">
-      <div class="info"><img class="info-image" src="image/player/Right Song.png" alt=""></div>
-      <div class="listening-items">
-        <div class="player">
-          <img class="player-image listening-items-image" src="image/player/Skip left.png" alt="">
-          <img class="player-image listening-items-image" src="image/player/Play.png" alt="">
-          <img class="player-image listening-items-image" src="image/player/Skip right.png" alt="">
-        </div>
-        <div><img src="image/player/Player.png" alt=""></div>
-      </div>
-
-    </div>
-  </div>
-
-
-</body>
-
+  </body>
 </html>
