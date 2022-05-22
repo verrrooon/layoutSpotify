@@ -1,0 +1,41 @@
+.listening {
+    background-color: #030303;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.info-image {
+    vertical-align: middle;
+    margin-left: 15px;
+    width: 200px;
+}
+
+.listening-items {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.listening-items-image {
+    margin-bottom: 15px;
+}
+
+.player-image {
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.player-image:nth-child(2) {
+    width: 32px;
+    height: 32px;
+}

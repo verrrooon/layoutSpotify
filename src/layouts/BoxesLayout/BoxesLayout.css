@@ -1,0 +1,26 @@
+.boxes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.definition {
+    font-weight: 200;
+    font-size: 90%;
+    color: #B3B3B3;
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    width: inherit;
+}

@@ -1,0 +1,8 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    background: #121212;
+    color: white;
+    margin-bottom: 50px;
+}
